@@ -20,7 +20,7 @@ enum {
     RED_LED    = LED_1,
     ORANGE_LED = LED_2,
 };
-#elif IOTLAB_CN
+#elif defined(IOTLAB_CN) || defined(IOTLAB_CN_CATIMEX)
 enum {
     LEDS_MASK  = LED_0 | LED_1,
     GREEN_LED  = LED_0,

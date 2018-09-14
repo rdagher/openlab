@@ -86,7 +86,7 @@ struct gpio_conf gpio_config[4] = {
         .nvic_line = NVIC_IRQ_LINE_EXTI3,
     },
 };
-#elif IOTLAB_CN
+#elif defined(IOTLAB_CN) || defined(IOTLAB_CN_CATIMEX)
 struct gpio_conf gpio_config[4] = {
     {}, // allow using gpio_config[gpio_num] directly
     {

@@ -10,3 +10,9 @@ endif (PLATFORM STREQUAL "iotlab-cn")
 if (PLATFORM STREQUAL "iotlab-m3")
     add_subdirectory(control_node)
 endif (PLATFORM STREQUAL "iotlab-m3")
+
+
+if (PLATFORM STREQUAL "iotlab-cn-catimex")
+    add_subdirectory(control_node_catimex)
+endif (PLATFORM STREQUAL "iotlab-cn-catimex")
+

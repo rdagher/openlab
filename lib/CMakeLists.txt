@@ -46,6 +46,7 @@ endif (${PLATFORM_HAS_USB})
 
 # Include the fiteco library
 add_subdirectory(fiteco)
+add_subdirectory(fiteco_catimex)
 
 # Create the fat32 library
 if(${PLATFORM_HAS_SD})
