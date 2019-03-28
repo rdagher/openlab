@@ -148,14 +148,14 @@ static void power_setup()
 
     log_printf("Configuring INA226...\n");
 
-    // Select PC0 as input interrupt (ALERT)
-    gpio_set_input(GPIO_C, GPIO_PIN_0);
-    afio_select_exti_pin(EXTI_LINE_Px0, AFIO_PORT_C);
-    nvic_enable_interrupt_line(NVIC_IRQ_LINE_EXTI0);
+    // Select PB12 as input interrupt (ALERT)
+    gpio_set_input(GPIO_B, GPIO_PIN_12);
+    afio_select_exti_pin(EXTI_LINE_Px12, AFIO_PORT_B);
+    nvic_enable_interrupt_line(NVIC_IRQ_LINE_EXTI15_10);
 
     // Configure the INA226, then initialize
     //ina226_init(I2C_1, 0x80, EXTI_LINE_Px0);
-    ina226_init(I2C_2, 0x80, EXTI_LINE_Px0);
+    ina226_init(I2C_2, 0x80, EXTI_LINE_Px12);
 
     // Initial calibration
     ina226_calibrate(1, 0.1);
